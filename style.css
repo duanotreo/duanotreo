@@ -313,18 +313,109 @@ section.visible {
   text-decoration: underline;
 }
 
-/* responsive cho màn nhỏ */
-@media (max-width: 600px) {
+/* Responsive cho điện thoại */
+@media (max-width: 768px) {
+
+  /* ABOUT */
+  #about {
+    flex-direction: column;
+    padding: 60px 20px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  #about img {
+    width: 180px;
+  }
+
+  #about h2 {
+    font-size: 22px;
+  }
+
+  #about p {
+    font-size: 15px;
+    max-width: 100%;
+  }
+
+  /* SỐ TREO */
+  .so-treo {
+    padding: 80px 20px;
+    border-radius: 15px;
+  }
+
+  .so-treo h2 {
+    font-size: 28px;
+    margin-top: -40px;
+  }
+
+  .so-treo h1 {
+    font-size: 100px;
+  }
+
+  /* STORY */
+  .story {
+    margin-top: -40px;
+    padding: 20px 0;
+  }
+
+  .story-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .story-text {
+    width: 100%;
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .story-text h2 {
+    font-size: 24px;
+  }
+
+  .story-text p {
+    font-size: 15px;
+  }
+
+  /* GẠCH KẺ NGANG */
+  .divider {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
   .footer-top {
     flex-direction: column;
     align-items: center;
-    text-align: center;
+  }
+
+  .footer-logo {
+    width: 60px;
+  }
+
+  .footer-top p {
+    font-size: 16px;
   }
 
   .footer-bottom {
     flex-direction: column;
     gap: 20px;
-    align-items: center;
+  }
+
+  .footer-column h3 {
+    font-size: 18px;
+  }
+
+  .footer-column li,
+  .footer-column a {
+    font-size: 16px;
   }
 }
 
@@ -445,6 +536,82 @@ section.visible {
 }
 
 
+
+/* Responsive cho phần About (mission, team, values) */
+@media (max-width: 768px) {
+
+  /* PHẦN MISSION */
+  .mission {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .mission-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .mission-text h2 {
+    font-size: 24px;
+  }
+
+  .mission-text p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .mission-box {
+    width: 100%;
+    padding: 25px;
+    border-radius: 20px;
+  }
+
+  /* PHẦN TEAM */
+  .team-section {
+    padding: 50px 20px;
+  }
+
+  .team-section h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 người mỗi hàng */
+    gap: 30px;
+  }
+
+  .member img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .member h3 {
+    font-size: 18px;
+  }
+
+  /* PHẦN VALUES */
+  .values-section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 20px;
+    border-radius: 15px;
+  }
+
+  .value-section h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .value-content p,
+  .value-content strong {
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
+
+
 /*phan blog*/
 .blog-section {
   background-color: #f7e5c7; /* nền be */
@@ -553,250 +720,59 @@ section.visible {
   object-fit: cover;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .blog-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .blog-card {
-    width: 90%;
-  }
-}
-
-
-
-/* responsive cho màn nhỏ */
-@media (max-width: 800px) {
-  .mission-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  .mission-box {
-    width: 100%;
-  }
-}
-
-
-
-
 
 
 @media (max-width: 768px) {
-  /* Giao diện điện thoại */
-  .series-grid {
-    grid-template-columns: 1fr; /* xếp dọc thay vì 3 cột */
+  /* --- Hero Header --- */
+  .hero-header {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
   }
 
-  h2 {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .card {
-    width: 90%;
-    margin: 0 auto 20px;
-  }
-}
-
-
-
-/* --- Responsive cho điện thoại --- */
-@media (max-width: 768px) {
-  /* Co dãn layout chính */
-  body {
-    overflow-x: hidden;
-  }
-
-  nav ul {
+  /* --- Navbar --- */
+  .navbar {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
     gap: 10px;
   }
 
-  .hero-header {
-    height: auto;
-    padding: 60px 20px;
-    background-position: center top;
+  .logo img {
+    width: 50px;
   }
 
-  .so-treo {
-    width: 95%;
-    padding: 20px;
-  }
-
-  .series-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .about-content,
-  .blog-content {
+  .nav-links {
     flex-direction: column;
-    padding: 30px 15px;
-    text-align: center;
+    gap: 15px;
+    width: 100%;
   }
 
-  h1, h2, h3 {
-    font-size: clamp(20px, 5vw, 28px);
-  }
-
-  p {
-    font-size: clamp(14px, 4vw, 18px);
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-
-
-
-
-/* ===========================
-   📱 Responsive cho điện thoại about
-   =========================== */
-@media (max-width: 768px) {
-  /* --- Phần sứ mệnh --- */
-  .mission {
-    padding: 40px 20px;
-  }
-
-  .mission-content {
-    flex-direction: column; /* Ảnh và chữ xếp dọc */
-    gap: 30px;
-    text-align: center;
-  }
-
-  .mission-box {
-    width: 100%; /* khung vàng chiếm hết chiều ngang */
-    padding: 20px;
-  }
-
-  .mission-text h2 {
-    font-size: 26px;
-  }
-
-  .mission-text p {
+  .nav-links a {
     font-size: 20px;
   }
 
-  /* --- Phần đội ngũ --- */
-  .team-section {
-    padding: 40px 20px;
+  .cta {
+    font-size: 20px;
+    padding: 10px 20px;
+    align-self: center;
   }
 
-  .team-grid {
-    grid-template-columns: 1fr; /* mỗi hàng 1 người */
-    gap: 30px;
+  /* --- Section chung --- */
+  section {
+    padding: 50px 5%;
   }
 
-  .member img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .member h3 {
-    font-size: 18px;
-  }
-
-  /* --- Phần giá trị cốt lõi --- */
-  .values-section {
-    width: 100%;              /* chiếm toàn màn hình */
-    margin: 20px auto;        /* căn giữa */
-    padding: 30px;
-  }
-
-  .value-section h2 {
-    font-size: 28px;
-  }
-
-  .value-content p,
-  .value-content strong {
-    font-size: 18px;
-  }
-}
-
-
-
-/* ===========================
-   📱 Responsive cho điện thoại (Blog)
-   =========================== */
-@media (max-width: 768px) {
-  /* --- Phần danh sách blog chính --- */
-  .blog-section {
-    flex-direction: column;      /* xếp dọc */
-    align-items: center;
-    padding: 30px 20px;
-    gap: 40px;
-  }
-
-  .blog-card {
-    width: 100%;                 /* chiếm toàn chiều ngang */
-    max-width: 420px;            /* giới hạn chiều rộng */
-  }
-
-  .blog-image {
-    height: 200px;               /* tăng chút chiều cao ảnh */
-  }
-
-  .blog-card h3 {
-    font-size: 22px;
-  }
-
-  .blog-info {
-    font-size: 13px;
-  }
-
-  /* --- Phần danh sách nhỏ bên dưới (blog-list) --- */
-  .blog-list {
-    padding: 40px 20px;
-    align-items: center;         /* căn giữa thay vì bên phải */
-    gap: 40px;
-  }
-
-  .blog-item {
-    width: 100%;
-    max-width: 400px;
-    align-items: center;
-    text-align: left;
-  }
-
-  .blog-thumb {
-    height: 200px;
-  }
-
-  .blog-meta {
-    font-size: 13px;
-    justify-content: center;
-    margin-left: 0;
-  }
-
-  .blog-item h4 {
-    font-size: 18px;
-    margin-left: 0;
+  /* --- Tiêu đề series --- */
+  .series h2 {
+    font-size: 26px;
     text-align: center;
-  }
-
-  /* Ẩn bớt margin cho cân đối */
-  .blog-thumb,
-  .blog-item h4,
-  .blog-meta {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
 }
 
-
-
-
-/* ===========================
-   📱 Responsive cho điện thoại
-   =========================== */
-@media (max-width: 768px) {
-
-  /* --- Hero Header --- */
+/* 📱 Responsive mạnh hơn cho màn hình nhỏ hơn 480px */
+@media (max-width: 480px) {
   .hero-header {
     height: 60vh;
     background-size: cover;
@@ -804,15 +780,8 @@ section.visible {
   }
 
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+    padding: 5px 15px;
+    gap: 5px;
   }
 
   .nav-links a {
@@ -820,100 +789,80 @@ section.visible {
   }
 
   .cta {
-    font-size: 22px;
-    padding: 10px 20px;
-    margin-top: 10px;
-  }
-
-  /* --- About Section --- */
-  #about {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  #about img {
-    width: 80%;
-    max-width: 300px;
-  }
-
-  #about p {
-    font-size: 16px;
-    max-width: 90%;
-    text-align: center;
-  }
-
-  /* --- Số Ổ Treo --- */
-  .so-treo {
-    padding: 80px 20px;
-  }
-
-  .so-treo h2 {
-    font-size: 30px;
-    margin-top: 0;
-  }
-
-  .so-treo h1 {
-    font-size: 120px;
-  }
-
-  /* --- Series Hành Trình --- */
-  .story {
-    margin-top: -50px;
-    padding: 20px;
-  }
-
-  .story-container {
-    flex-direction: column;
-    height: auto;
-    background-size: cover;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .story-text {
-    width: 90%;
-    margin: 20px 0 0 0;
-    padding: 20px;
-  }
-
-  .story-text h2 {
-    font-size: 24px;
-  }
-
-  .story-text p {
-    font-size: 16px;
-  }
-
-  /* --- Gạch ngang --- */
-  .divider {
-    width: 60%;
-    margin: 10px auto;
-  }
-
-  /* --- Footer --- */
-  .footer {
-    padding: 30px 20px;
-    text-align: center;
-  }
-
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .footer-column h3 {
     font-size: 18px;
+    padding: 8px 18px;
   }
 
-  .footer-column li,
-  .footer-column a {
-    font-size: 16px;
+  .series h2 {
+    font-size: 22px;
+  }
+}
+
+
+
+/* Responsive cho phần BLOG */
+@media (max-width: 768px) {
+
+  /* Phần blog chính */
+  .blog-section {
+    flex-direction: column; /* xếp dọc thay vì ngang */
+    padding: 30px 20px;
+    gap: 40px;
+  }
+
+  .blog-card {
+    width: 100%;
+    align-items: center;
+  }
+
+  .blog-image {
+    height: 200px;
+    border-radius: 15px;
+  }
+
+  .blog-info {
+    font-size: 13px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .blog-card h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .blog-lines {
+    align-items: center;
+  }
+
+  /* Phần danh sách blog (cuối trang) */
+  .blog-list {
+    align-items: center; /* căn giữa */
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .blog-item {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .blog-thumb {
+    width: 90%;
+    height: 200px;
+    border-radius: 20px;
+  }
+
+  .blog-meta {
+    justify-content: center;
+    margin-left: 0;
+    font-size: 13px;
+  }
+
+  .blog-item h4 {
+    font-size: 17px;
+    text-align: center;
+    margin-left: 0;
   }
 }
