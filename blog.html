@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ổ Treo</title>
+  <link rel="stylesheet" href="/Ôtreo/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+ #article-content {
+    position: absolute;          /* Đặt vị trí tuyệt đối (tự do trong khung cha) */
+    top: 1300px;                   /* Cách mép trên 20px */
+    left: 100px;                  /* Cách mép trái 20px */
+    width: 100%;                  /* Chiếm 85% chiều rộng của khung cha */
+    max-width: 900px;            /* Tối đa rộng 600px */
+    background: #f9e4e4;            /* Nền trắng */
+    border-radius: 12px;         /* Bo góc 12px */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Đổ bóng nhẹ */
+    padding: 25px;               /* Cách lề trong 25px */
+    opacity: 0;                  /* Ban đầu ẩn (độ mờ = 0) */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Hiệu ứng mượt khi hiển thị */
+    transform: translateY(-10px); /* Ban đầu hơi dịch lên trên 10px */
+}
+
+#article-content.show {
+    opacity: 1;                  /* Khi thêm class .show thì hiện rõ */
+    transform: translateY(0);    /* Trở về vị trí ban đầu (hiệu ứng trượt xuống) */
+}
+
+#article-content h2 {
+    margin-top: 0;               /* Bỏ khoảng cách đầu trên của tiêu đề */
+    color: #333;                 /* Màu chữ xám đậm */
+}
+
+#article-content p {
+    line-height: 1.6;            /* Giãn dòng 1.6 */
+    color: #555;                 /* Màu chữ xám vừa */
+}
+#article-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  object-fit: cover;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+  </style>
+</head>
+<body>
+  <header class="hero-header">
+    <nav class="navbar">
+      <div class="logo">
+        <img src="/Ôtreo/Ảnh chụp màn hình 2025-10-06 083831.png" alt="Ổ Treo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="/Ôtreo/index.html" class="active">Our work</a></li>
+        <li><a href="/Ôtreo/about.html">About us</a></li>
+        <li><a href="/Ôtreo/blog.html">Blog</a></li>
+      </ul>
+      <button class="cta">“Treo” ngay</button>
+    </nav>
+  </header>
+  <main>
+    <section class="blog-section">
+  <div class="blog-card" onclick="showArticle(1)">
+    <div class="blog-image" style="background-image: url('https://cdn.prod.website-files.com/64b965b60f74a4d901f82698/68cd098a51517ebbe191edb7_Ukraine%20020(1)-p-1080.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="blog-info">
+      <span class="blog-date">4/10/2025</span>
+      <span class="blog-author">Thuy Le</span>
+    </div>
+    <h3>“TREO LÀ GÌ”</h3>
+    <div class="blog-lines" >
+      <div class="line"></div>
+      <div class="line short"></div>
+    </div>
+  </div>
+
+  <div class="blog-card" onclick="showArticle(2)">
+    <div class="blog-image" style="background-image: url('https://cdn.prod.website-files.com/64b965b60f74a4d901f82698/68aec221ed1f43d94f48f9c4_Iraq.png'); background-size: cover; background-position: center;"></div>
+    <div class="blog-info">
+      <span class="blog-date">4/10/2025</span>
+      <span class="blog-author">Thuy Le</span>
+    </div>
+    <h3>“TREO LÀ GÌ”</h3>
+    <div class="blog-lines">
+      <div class="line"></div>
+      <div class="line short"></div>
+    </div>
+  </div>
+
+  <div class="blog-card" onclick="showArticle(3)">
+    <div class="blog-image" style="background-image: url('https://cdn.prod.website-files.com/64b965b60f74a4d901f82698/689b4112e7725f3f0917eb80_image5-p-1080.jpg'); background-size: cover; background-position: center;"></div>
+    <div class="blog-info">
+      <span class="blog-date">4/10/2025</span>
+      <span class="blog-author">Thuy Le</span>
+    </div>
+    <h3>“TREO LÀ GÌ”</h3>
+    <div class="blog-lines">
+      <div class="line"></div>
+      <div class="line short"></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="blog-list">
+  <div class="blog-item" onclick="showArticle(4)">
+    <div class="blog-thumb"><img src="https://cdn.prod.website-files.com/64b965b60f74a4d901f82698/6874c6611c1a30a7649dd0a3_Baklava%202.jpg" alt="Thumnail bài viết"></div>
+    <div class="blog-meta">
+      <span class="date">4/10/2025</span>
+      <span class="author">Thuy Le</span>
+    </div>
+    <h4>“TREO LÀ GÌ”</h4>
+  </div>
+
+  <div class="blog-item" onclick="showArticle(5)">
+    <div class="blog-thumb"><img src="https://cdn.prod.website-files.com/64b965b60f74a4d901f82698/688c5d51b182b4a38bb02117_Screenshot%202025-08-01%20at%2008.19.14-p-1080.png" alt="Thumnail bài viết"></div>
+    <div class="blog-meta">
+      <span class="date">4/10/2025</span>
+      <span class="author">Thuy Le</span>
+    </div>
+    <h4>“TREO LÀ GÌ”</h4>
+  </div>
+
+  <div class="blog-item" onclick="showArticle(6)">
+    <div class="blog-thumb"><img src="https://cdn.prod.website-files.com/64b965b60f74a4d901f82698/689b169c54e95dd676fb8f76_Madi%202.png" alt="Thumnail bài viết"></div>
+    <div class="blog-meta">
+      <span class="date">4/10/2025</span>
+      <span class="author">Thuy Le</span>
+    </div>
+    <h4>“TREO LÀ GÌ”</h4>
+  </div>
+</section>
+
+
+<div id="article-content">
+    <h2>Bấm vào ảnh để xem bài viết...</h2>
+  </div>
+
+
+
+
+  </main>
+  <script src="/Ôtreo/scrip.js"></script>
+</body>
+</html>
